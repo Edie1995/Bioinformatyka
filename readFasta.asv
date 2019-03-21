@@ -1,7 +1,7 @@
 function dataFasta = readFasta(file)
 newStr = splitlines(file);
 lines=0;
-sequence='';
+sequence="";
 header="";
 for i=1:size(newStr)
     if(newStr(i,:)~="")
@@ -16,7 +16,6 @@ for i=1:size(newStr)
     end
 end
 id=idFasta(header);
-sequence(sequence == ' ') = [];
-checkFile(char(sequence));
+checkFile(char(strtrim(sequence)));
 dataFasta = struct('identifier',id ,'sequence',strtrim(sequence),'header',header); 
 end
