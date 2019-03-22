@@ -1,0 +1,8 @@
+1. 3 sposoby wczytywania
+2. delecja i insercja ->GAP, konwekcja->MATCH, substyctucja->MISMATCH
+3.d³ugoœæ dopasowanie-> d³ugoœæ sekwencji+przerwy
+4. Liczba przerw liczona w dwóch sekwencjach ³¹cznie
+5. Przeskalowaæ, ¿eby nie by³o na wykresie zerowego wiersza i kolumny
+6. Schemat blokowy->samo liczenie nie ca³y program
+7. Analiza z³o¿onoœci-> tylko oszacowaæ
+8. http://rna.informatik.uni-freiburg.de/Teaching/index.jsp?toolName=Needleman-Wunsch do sprawdzania poprawnoœci dopasowañ
