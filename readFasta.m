@@ -10,8 +10,7 @@ for i=1:size(newStr)
         lines=lines+1;
         else
         strpom=[sequence,newStr(i,:)];
-       % sequence=strjoin(newStr(i,:));
-       sequence=strjoin(strpom);
+        sequence=strjoin(strpom);
         end
     end
 end
