@@ -3,7 +3,7 @@ function [aligmentMatrix,score]=searchingWay(firstMatrix)
 [x,y]=size(firstMatrix);
 aligmentMatrix=zeros(x,y);
 aligmentMatrix(x,y)=1;
-score=firstMatrix(x,y)
+score=firstMatrix(x,y);
 while x>=2&&y>=2
         max=firstMatrix(x-1,y-1);
         a=x-1;

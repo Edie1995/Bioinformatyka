@@ -4,7 +4,7 @@
 %traktowany on jest jako identyfikator do strony, natomiast drug¹ sekwencjê
 %wpisuje siê z klawiatury. W przypadku dwóch parametrów, obie sekwencje
 %pobierane s¹ ze strony.
-function [] = chooseFilter(miss,match,gap,path,filename,varargin)
+function [] = chooseFilter(miss,match,gap,path,jpgFileName,txtFileName,varargin)
 if(length(varargin) < 1)
     fasta1=inputFasta;
     fasta2=inputFasta;    
@@ -13,12 +13,15 @@ elseif(length(varargin) == 1)
     fasta2=inputFasta;   
 elseif(length(varargin) == 2)
     fasta1=readFasta(fetchFasta(varargin(1)));
-    fasta2=readFasta(fetchFasta(varargin(2)));    
+    fasta2=readFasta(fetchFasta(varargin(2))); 
+elseif(length(varargin)==4)
+    fasta1=readFasta(inputFileFasta(varargin(1),varargin(2)));
+    fasta2=readFasta(inputFileFasta(varargin(3),varargin(4))); 
 end 
  firstMatrix=createMatrix(miss,match,gap,fasta1,fasta2);
 [aligmentMatrix,score]=searchingWay(firstMatrix);
 drawMatrix(firstMatrix,aligmentMatrix,'seq1','seq2');
-[gaps,identity,lengthWay,madeSeq1,madeSeq2,madeSeq3]=writeSequence(aligmentMatrix,fasta1,fasta2);
-toTextFile(gaps,identity,lengthWay,madeSeq1,madeSeq2,madeSeq3,match,miss,gap,score);
-saveFile(path,filename);
+writingSequence=writeSequence(aligmentMatrix,fasta1,fasta2);
+toTextFile(writingSequence,match,miss,gap,fasta1,fasta2,score,path,txtFileName);
+saveFile(path,jpgFileName);
 end

@@ -1,4 +1,4 @@
-function [gaps,identity,lengthWay,madeSeq1,madeSeq2,madeSeq3] = writeSequence(aligmentMatrix, fasta1,fasta2)
+function writeSequence = writeSequence(aligmentMatrix, fasta1,fasta2)
 seq1=fasta1.sequence;
 seq2=fasta2.sequence;
 numSeq1=length(seq1);
@@ -73,9 +73,6 @@ while b>1
     b=b-1;
 end
 
-  
-
-
 if(length(madeSeq1)<length(madeSeq2))
     n=length(madeSeq1);
 else
@@ -90,10 +87,5 @@ for i=1:n
          madeSeq3=strcat(madeSeq3," ");
     end    
 end
-disp(madeSeq1);
-disp(madeSeq3);
-disp(madeSeq2);
-X=["gaps: " , gaps,' identity: ' , identity,' length: ' , lengthWay];
-disp(X);
-
+writeSequence = struct('gaps',gaps,'identity',identity,'lengthWay',lengthWay,'madeSeq1',madeSeq1,'madeSeq2',madeSeq2,'madeSeq3',madeSeq3); 
 end
