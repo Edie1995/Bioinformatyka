@@ -1,25 +1,33 @@
-function [aligmentMatrix,score]=searchingWay(firstMatrix)
-
-[x,y]=size(firstMatrix);
-aligmentMatrix=zeros(x,y);
-aligmentMatrix(x,y)=1;
-score=firstMatrix(x,y);
-while x>=2&&y>=2
-        max=firstMatrix(x-1,y-1);
-        a=x-1;
-        b=y-1;
-        if(max<firstMatrix(x-1,y))
-            max=firstMatrix(x-1,y);
-            a=x-1;
-            b=y;
+%Funkcja odpowiedzialna za stowrzenie najoptymalnijeszej œciezki
+%dopasowania.
+function [aligmentMatrix,score] = searchingWay(firstMatrix)
+%Pobieranie rozmiarów macierzy kosztu
+[x,y] = size(firstMatrix);
+%Tworzenie macierzy o rozmiarach takich jak macierz kosztu
+aligmentMatrix = zeros(x,y);
+aligmentMatrix(x,y) = 1;
+score = firstMatrix(x,y);
+%Pêtla odpowiedzialna za wygenerowanie odpowiedniej œciezki. Szukana jest
+%maksymalna wartoœæ z 3 ( na prawo, do góry, po skosie), pobierane s¹
+%wspó³rzêdne elementu macierzy z maksymaln¹ wartoœci¹. W miejscu macierzy 
+%dopasowania w znalezione pole wpisywana jest wartoœæ 1 Nastêpnie pêtla
+%przechodzi do tego punktu i szuka analogicznie kolejnego. 
+while x >= 2 && y >= 2
+        max = firstMatrix(x - 1,y - 1);
+        a = x - 1;
+        b = y - 1;
+        if(max < firstMatrix(x - 1,y))
+            max = firstMatrix(x - 1,y);
+            a = x-1;
+            b = y;
         end
-        if(max<firstMatrix(x,y-1))
-            a=x;
-            b=y-1;
+        if(max < firstMatrix(x,y - 1))
+            a = x;
+            b = y - 1;
         end
         
-        aligmentMatrix(a,b)=1;
-        x=a; 
-        y=b;
+        aligmentMatrix(a,b) = 1;
+        x = a; 
+        y = b;
 end
 end

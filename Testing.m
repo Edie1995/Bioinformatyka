@@ -1,10 +1,24 @@
-%Wywo³nie programu z dwiema sekwencjami wprowadzanymi z klawiatury
-%chooseFilter(-1,1,-1,'C:\Users\kruko\OneDrive\Pulpit','proba1')
+%Wywyo³anie funckji z dwiema sekwencjami wpisanymi przez u¿ytkownika
+chooseInputMethod(-1,1,-1,'C:\Users\kruko\OneDrive\Pulpit','wpisyawne','wpisywane.txt');
+
 %Wywyo³anie funckji z dwiema sekwencjami odczytanymi ze strony NCBI
-chooseFilter(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','jpgNET','txtNET.txt','KP056826.1','NM_001095532.1');
-%Wywo³anie programu z jedn¹ sekwencj¹ ze strony NCBI a jedn¹ wpisan¹ z
-%klawiatury.
-%chooseFilter(10,3,'C:\Users\kruko\OneDrive\Pulpit','proba1','MK482072.1');
-%chooseFilter(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','jpg5','txt5.txt','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence4.fasta','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
-%5,20,15,10
-%2,4,1,3
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185310.1','FJ185309.1');
+
+%Wywyo³anie funckji z dwiema sekwencjami odczytanymi z pliku
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','jpg5','txt5.txt','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence4.fasta','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+
+%Wywyo³anie funckji z jedn¹ sekwencj¹ wpisan¹ przez u¿ytkownika a drug¹ ze
+%strony NCBI
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1');
+
+
+%Wywyo³anie funckji z jedn¹ sekwencj¹ wpisan¹ przez u¿ytkownika a drug¹ z
+%pliku
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+
+%Wywyo³anie funckji z pierwsz¹ sekwencj¹ ze strony NCBI a drug¹ z
+%pliku
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+
+%Wywyo³anie funckji z pierwsz¹ sekwencj¹ z pliku a drug¹ ze strony NCBI
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
