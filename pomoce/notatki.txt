@@ -1,0 +1,6 @@
+Wytrzyma³oœæ na niesymetrycznoœæ macierzy, wówczas róznica czy G na A czy A na G
+Mo¿e byæ klika punktów maksymalnych, z ka¿dego chociaz jedna œcie¿ka
+Zakres-indeksy w macierzy
+Zadanie 6- lokalne dopasowanie dla chêtnych
+26 po³¹cznie progarmów
+œr 11-13, pn 13-15
