@@ -1,0 +1,19 @@
+
+#1: seq1
+#2: seq2
+#Mode: distance
+#Table:
+# A C G T U
+A 5-8-8-8-8
+C-8 5-8-8-8
+G-8-8 5-8-8
+T-8-8-8 5-8
+U-8-8-8-8 5
+#Gap: -2        
+#Score: 264
+#Length: 112       
+#Indentity: 10/112(9%)
+#Gaps: 39/112(35%)
+AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTC-TGTAGTACT-G---TGC-ATG---CAG-AG-CAT
+|         |        |            |   |                 |        | |        |      |                             
+AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GCTAGT-ATGCTGCTCTAGCAGTGCTGTAGATGCTAT
