@@ -15,16 +15,16 @@
 function firstMatrix = createMatrix (pointsTable,gap,fasta1,fasta2)
 sequence1 = fasta1.sequence;
 sequence2 = fasta2.sequence;
-firstMatrix = zeros(length(sequence1)+1,length(sequence2)+1);
+firstMatrix = zeros(length(sequence1) + 1,length(sequence2) + 1);
 
-for i = 2:(length(sequence1)+1)
-    for j = 2:(length(sequence2)+1)
+for i = 2:(length(sequence1) + 1)
+    for j = 2:(length(sequence2) + 1)
         max = firstMatrix(i - 1,j) + gap;
         num1 = firstMatrix (i,j - 1) + gap;
-        point =  pointsTable(sequence1(i-1),sequence2(j-1));
+        point =  pointsTable(sequence1(i - 1),sequence2(j - 1));
         point = point{:,:};
         num2 = firstMatrix(i - 1,j - 1) + point;
-        num3=0;
+        num3 = 0;
         if(max < num1)
             max = num1;
         end

@@ -20,7 +20,7 @@ fileID = fopen(sciezkaZapisu,'w');
 header1 = fasta1.header;
 header2 = fasta2.header;
 
-for i =1:length(writingSequence)
+for i = 1:length(writingSequence)
     fprintf(fileID,'>%s %d-%d\n', header1,rowsOfEnd(i),rowsOfMaxes(i));
     fprintf(fileID,'%s\n',writingSequence(i).madeSeq1);
     fprintf(fileID,'>%s %d-%d\n', header2,colsOfEnd(i),colsOfMaxes(i));

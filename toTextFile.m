@@ -21,26 +21,26 @@ fileID = fopen(sciezkaZapisu,'w');
 rows = char(pointsTable.Properties.RowNames);
 columns = char(pointsTable.Properties.VariableNames);
 
-chr(1,1)='#';
+chr(1,1) = '#';
 for i = 1: length(rows)
-    chr(i + 1,1)=rows(i);
+    chr(i + 1,1) = rows(i);
     for j = 2:2:length(columns) * 2
-        if(i==1)
-            chr(i,j:j+1) =[' ' columns(j/2)];
+        if(i == 1)
+            chr(i,j:j + 1) = [' ' columns(j / 2)];
         end
-        point = pointsTable(rows(i),columns(j/2));
+        point = pointsTable(rows(i),columns(j / 2));
         point = point{:,:};
-        if(point<0)
-            chr(i+1,j:j+1) = num2str(point);
+        if(point < 0)
+            chr(i + 1,j:j + 1) = num2str(point);
         else
-            chr(i+1,j:j+1) =[' ' num2str(point)];
+            chr(i + 1,j:j + 1) =[' ' num2str(point)];
         end
         
     end
 end
-c=cellstr(chr);
+c = cellstr(chr);
 
-for i=1:length(writingSequence)
+for i = 1:length(writingSequence)
     identity = writingSequence(i).identity;
     lengthWay = writingSequence(i).lengthWay;
     gaps = writingSequence(i).gaps;

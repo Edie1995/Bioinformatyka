@@ -16,8 +16,8 @@ for s=1:size(aligmentCell)
     seq1 = fasta1.sequence;
     seq2 = fasta2.sequence;
    
-    x=rowsOfMaxes(s);
-    y=colsOfMaxes(s);
+    x = rowsOfMaxes(s);
+    y = colsOfMaxes(s);
    
     numSeq1 = x-1;
     numSeq2 = y-1;
@@ -110,7 +110,7 @@ for s=1:size(aligmentCell)
             madeSeq3 = strcat(madeSeq3," ");
         end
     end
-    idx=s;
+    idx = s;
     writeSequence(idx) = struct('gaps',gaps,'identity',identity,'lengthWay',lengthWay,'madeSeq1',madeSeq1,'madeSeq2',madeSeq2,'madeSeq3',madeSeq3);
    
 end

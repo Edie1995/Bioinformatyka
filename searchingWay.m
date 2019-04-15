@@ -18,11 +18,13 @@
 function [C,score,rowsOfMaxes, colsOfMaxes, rowsOfEnd, colsOfEnd] = searchingWay(firstMatrix,gap)
 [maxValue] = max(firstMatrix(:));
 [rowsOfMaxes, colsOfMaxes] = find(firstMatrix == maxValue);
-C=cell(length(rowsOfMaxes),1);
+C = cell(length(rowsOfMaxes),1);
 score = maxValue;
-for i=1:length(rowsOfMaxes)
-    x=rowsOfMaxes(i);
-    y=colsOfMaxes(i);
+rowsOfEnd = zeros(length(rowsOfMaxes));
+colsOfEnd = zeros(length(rowsOfMaxes));
+for i = 1:length(rowsOfMaxes)
+    x = rowsOfMaxes(i);
+    y = colsOfMaxes(i);
     aligmentMatrix = zeros(x,y);
     aligmentMatrix(x,y) = 1;
     while x >= 1 || y >= 1
@@ -30,9 +32,9 @@ for i=1:length(rowsOfMaxes)
         a = x - 1;
         b = y - 1;
         if(maxim < firstMatrix(x - 1,y))
-            if(firstMatrix(x,y) - firstMatrix(x - 1,y)==gap)
+            if(firstMatrix(x,y) - firstMatrix(x - 1,y) == gap)
                 maxim = firstMatrix(x - 1,y);
-                a = x-1;
+                a = x - 1;
                 b = y;
             end
         end
@@ -50,8 +52,8 @@ for i=1:length(rowsOfMaxes)
         x = a;
         y = b;
     end
-    rowsOfEnd(i)=x;
-    colsOfEnd(i)=y;
-    C{i,1}=num2cell(aligmentMatrix);
+    rowsOfEnd(i) = x;
+    colsOfEnd(i) = y;
+    C{i,1} = num2cell(aligmentMatrix);
 end
 end

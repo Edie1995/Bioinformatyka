@@ -9,8 +9,8 @@ function [] = drawMatrix(firstMatrix, aligmentCell,seq1,seq2)
 figure
 hold on
 imagesc(firstMatrix);
-colors=['r','g','b','y','o','w','m','c','k'];
-for i=1:size(aligmentCell)
+colors = ['r','g','b','y','o','w','m','c','k'];
+for i = 1:size(aligmentCell)
     hold on
     spy(cell2mat(aligmentCell{i}),colors(i))
 end
