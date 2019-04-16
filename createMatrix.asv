@@ -7,7 +7,7 @@
 function firstMatrix = createMatrix (miss,match,gap,fasta1,fasta2)
 sequence1 = fasta1.sequence;
 sequence2 = fasta2.sequence;
-firstMatrix = zeros(length(sequence1)+1,length(sequence2)+1);
+firstMatrix = zeros(length(sequence1),length(sequence2));
 %pêtle odpowiedzialna za wype³nienie brzegowych kolumn wartoœciami bêd¹cymi
 %wielokrotnoœci¹ punktacji za przerwê
 for i = 1:length(sequence1)
@@ -21,11 +21,11 @@ end
 %obierana jest wartoœæ uzyskana z lewej strony, je¿eli jest mniejsza od
 %wartoœci uzyskanej po skosie zostaje maksem, jak nie podmieniana jest
 %maksymalna wartoœæ. Nastêpnie analogicznie porównianie z wartoœci¹ z góry.
-for i = 2:(length(sequence1)+1)
-    for j = 2:(length(sequence2)+1)
+for i = 2:length(sequence1)+1
+    for j = 2:length(sequence2)+1
         max = firstMatrix(i - 1,j) + gap;
         num1 = firstMatrix (i,j - 1) + gap;
-         if(sequence1(i-1) == sequence2(j-1))   
+         if(sequence1(i+1) == sequence2(j+1))   
            num2 = firstMatrix(i - 1,j - 1) + match;
          else
            num2 = firstMatrix(i - 1,j - 1) + miss;

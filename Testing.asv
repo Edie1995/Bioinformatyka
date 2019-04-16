@@ -9,16 +9,16 @@ main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','jpg5','txt5.txt','D:\Uczelnia\6 s
 
 %Wywyo³anie funckji z jedn¹ sekwencj¹ wpisan¹ przez u¿ytkownika a drug¹ ze
 %strony NCBI
-main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1');
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1');
 
 
 %Wywyo³anie funckji z jedn¹ sekwencj¹ wpisan¹ przez u¿ytkownika a drug¹ z
 %pliku
-main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
 
 %Wywyo³anie funckji z pierwsz¹ sekwencj¹ ze strony NCBI a drug¹ z
 %pliku
-main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
 
 %Wywyo³anie funckji z pierwsz¹ sekwencj¹ z pliku a drug¹ ze strony NCBI
-main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');
+chooseInputMethod(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185309.1','D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab1','sequence3.fasta');

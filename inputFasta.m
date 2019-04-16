@@ -2,7 +2,7 @@
 %od u¿ytkownika z klawiatury, oraz przypisanie ich w odpowiedniej formie do
 %danej wyjœciowej.
 function fastaContent = inputFasta()
-fastaContent = struct('identifier',input('identifier: ', 's'),'sequence',input('sequence: ','s'),'header',input('header: ', 's')); 
+fastaContent = struct('header',input('header: ', 's'),'sequence',input('sequence: ','s')); 
 checkFile(fastaContent.sequence);
 end
 

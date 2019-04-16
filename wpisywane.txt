@@ -1,0 +1,13 @@
+#1: seq1
+#2: seq2
+#Mode: distance
+#Match: 1         
+#Mismatch: -1        
+#Gap: -1        
+#Score: 21
+#Length: 83        
+#Indentity: 34/83(41%)
+#Gaps: 28/83(34%)
+-AGCTCAGCATGCATGCA-TGA-CTACG---CATT-A-CG-CTACTACGACTATGCT-AGACATCGACTGCTAGCTCGTA-G
+         ||||  |||  |   ||||   ||||   ||  | ||  |  |  ||     |    ||   ||||   ||  
+AC-G--T-GATGC-AGCATCGTCGTACGCTGCATTAGCCGCATGCT-AG-AT-AGCCAT-GC-A-CAC---TAGC---TAGC

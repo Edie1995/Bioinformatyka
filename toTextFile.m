@@ -13,10 +13,10 @@ percentGaps = gaps / lengthWay * 100;
 %Zapis do pliku pod okreœlonym adresem
 sciezkaZapisu = path + "\" + txtFileName;
 fileID = fopen(sciezkaZapisu,'w');
-fprintf(fileID,'#1: %s\n#2: %s\n#Mode: distance\n#Match: %-10d\n#Mismatch: %-10d\n#Gap: %-10d\n#Score: %d\n#Length: %-10d\n',fasta1.identifier,fasta2.identifier,match,mismatch,gap,score,lengthWay);
+fprintf(fileID,'#1: %s\n#2: %s\n#Mode: distance\n#Match: %-10d\n#Mismatch: %-10d\n#Gap: %-10d\n#Score: %d\n#Length: %-10d\n',fasta1.header,fasta2.header,match,mismatch,gap,score,lengthWay);
 fprintf(fileID,'#Indentity: %d%c%d(%.0f%%)\n#Gaps: %d%c%d(%.0f%%)\n',identity,'/',lengthWay,percentIdentity,gaps,'/',lengthWay,percentGaps);
 fprintf(fileID,'%s\n%s\n%s',seq1,seq3,seq2);
 fclose(fileID);
 %Wyœwietlenie zapisanego pliku
-disp(fileread(sciezkaZapisu));
+disp(fileread(char(sciezkaZapisu)));
 end

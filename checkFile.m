@@ -1,7 +1,7 @@
-% Funkcja ta ma za zadanie sprawdziæ, czy nasza sekwencja zawiera wy³¹cznie poprawne znaki,
-% dopuszczone s¹ znaki A, C, G, T, U oraz pusty znak i znak nowej linii. W
-% przypadku, gdy wczytana sekwencja nie jest poprawna, wyœwietlany jest
-% b³¹d i program zostaje zatrzymany.
+%CHECKFILE Sprawdza, czy podana sekwencja nie zawiera niedopuszczalnych
+%znaków, je¿eli tak, funkcj koñczy program zwracaj¹c b³¹d "z³y kod"
+%
+%sequence - sekwencja do sprawdzenia
 function [] = checkFile(sequence)
 permission = '[A,C,G,T,U,"",newline]';
 for i = 1:length(sequence)
