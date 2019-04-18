@@ -1,4 +1,4 @@
-%Funkcja ta zapisuje pod okreœlon¹ w parametrach œcie¿k¹ plik w formacie
+% SAVEFILE Zapisuje pod okreœlon¹ w parametrach œcie¿k¹ plik w formacie
 %jpeg.
 function [] = saveFile(path,filename)
 sciezka = path + "\" + filename;

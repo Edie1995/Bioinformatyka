@@ -1,26 +1,25 @@
-%Funkcja tworz¹ca macierz kosztów.
+%CREATEMATRIX tworzy macierz kosztów.
+%
 %miss-wartoœæ jak¹ przyjmujemy dla niezgodnoœci sekwencji
 %match-dopasowanie, wartoœæ jak¹ przyjmujemy za dopasowanie
 %gap-wartoœæ jak¹ przyjmujemy za przerwê
 %fasta1-pierwszy plik fasta, z którego mo¿emy pobraæ sekwencjê
 %fasta2-drugi plik fasta, z którego mo¿emy pobraæ sekwencjê
+%
+%firstMatrix = createMatrix (miss,match,gap,fasta1,fasta2)-stworzona
+%macierz kosztu
 function firstMatrix = createMatrix (miss,match,gap,fasta1,fasta2)
 sequence1 = fasta1.sequence;
 sequence2 = fasta2.sequence;
 firstMatrix = zeros(length(sequence1)+1,length(sequence2)+1);
-%pêtle odpowiedzialna za wype³nienie brzegowych kolumn wartoœciami bêd¹cymi
-%wielokrotnoœci¹ punktacji za przerwê
-for i = 1:length(sequence1)
+
+for i = 1:length(sequence1)+1
     firstMatrix(i, 1) = ((i - 1) * gap);
 end
-for i=1:length(sequence2)
+for i=1:length(sequence2)+1
     firstMatrix(1,i) = ((i - 1) * gap);
 end
-%Uzupe³nienie macierzy kosztu maksymaln¹ wartoœciami z trzech (ukoœna, z
-%góry, z lewej), dla ka¿dego jej elementu. Najpierw za wartoœæ maksymaln¹
-%obierana jest wartoœæ uzyskana z lewej strony, je¿eli jest mniejsza od
-%wartoœci uzyskanej po skosie zostaje maksem, jak nie podmieniana jest
-%maksymalna wartoœæ. Nastêpnie analogicznie porównianie z wartoœci¹ z góry.
+
 for i = 2:(length(sequence1)+1)
     for j = 2:(length(sequence2)+1)
         max = firstMatrix(i - 1,j) + gap;

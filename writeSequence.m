@@ -1,28 +1,29 @@
-%Funkcja odpowiedzialna za stworzenie odpowiednich ci¹gów sekwencji
-%nukleotydów i ich przerw oraz znaków dopasowania.
+%WRIETSEQUENCE Tworzenie zapisu odpowiednich ci¹gów sekwencji nukleotydów i
+%ich przerw oraz znaków dopasowania.
+%
+%aligmentMatrix - macierz wyznaczaj¹ca siê¿kê dopasowania
+%fasta1 - pierwsza struktura zawieraj¹ca sekwencjê odczytan¹ z formatu
+%fasta
+%fasta2 - druga struktura zawieraj¹ca sekwencjê odczytan¹ z formatu
+%fasta
+%
+%writeSequence - struktura zawiraj¹ca dopasowane sekwencje w postaci ci¹gu
+%znaków oraz iloœæ przerw, iloœæ dopasowañ oraz d³ugoœæ drogi optymalnego
+%dopasowania
+%
+%writeSequence = struct('gaps',gaps,'identity',identity,'lengthWay',...
+%lengthWay,'madeSeq1',madeSeq1,'madeSeq2',madeSeq2,'madeSeq3',madeSeq3); 
 function writeSequence = writeSequence(aligmentMatrix, fasta1,fasta2)
-%Odczytanie odpowiednich wartoœci z argumentów wejœciowych i przyspisanie
-%ich do zmiennych
-%seq1 - pierwsza sekwencja
-%seq2 - druga sekwencja
 seq1 = fasta1.sequence;
 seq2 = fasta2.sequence;
-%D³goœci przekazanych do funkcji sekwencji
 numSeq1 = length(seq1);
 numSeq2 = length(seq2);
 [x,y] = size(aligmentMatrix);
-%Stworzenie nowych sekwecji, w które wstawiane bêd¹ znaki przerw
 madeSeq1 = seq1(numSeq1);
 madeSeq2 = seq2(numSeq2);
-%Przypisanie pocz¹tkowych wartoœci zmienych odpowiedzialnych za iloœæ
-%przerw, iloœæ dopasowañ oraz d³ugoœæ drogi.
 gaps = 0;
 identity = 0;
 lengthWay = 1;
-%Pêtla ta wyszukuje, czy œcie¿ka idzie po skosie, w lewo, czy do góry. W
-%zaleznoœci od wyniku (jeœli w górê to generowany jest znak przerwy '-'
-%w pierwszej sekwencji, jeœli w bok to znak przerwy w drugiej sekwencji,
-%jesli po skosie przepisywane s¹ oba znaki bez zmian.
 while x >= 2 && y >= 2
         if(aligmentMatrix(x - 1,y) == 1)
            numSeq1 = numSeq1 - 1;
@@ -59,7 +60,6 @@ while x >= 2 && y >= 2
         y = b;
      lengthWay = lengthWay + 1;       
 end
-%Uzupe³nianie '-' jeœli jedna z macierzy skoñczy siê szybciej ni¿ druga
 while a > 1
    if (aligmentMatrix(a - 1,b) == 1)
            numSeq1 = numSeq1 - 1;
@@ -93,9 +93,6 @@ else
     n = length(madeSeq2);
 end
 madeSeq3 = '';
-%Porównywanie kolejnych znaków nowych macierzy, jeœli pojawi¹ siê takie
-%same na tych samych miejscach i nie jest to znak przerwy, wówczas
-%generowany jest znak zgodnoœci w trzeciej sekwencji.
 for i = 1:n
     if(madeSeq1(i) == madeSeq2(i))
         madeSeq3 = strcat(madeSeq3,"|");

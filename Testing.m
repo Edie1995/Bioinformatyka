@@ -1,5 +1,5 @@
 %Wywyo³anie funckji z dwiema sekwencjami wpisanymi przez u¿ytkownika
-main(-1,1,-1,'C:\Users\Student.DESKTOP-VNR47RU\Downloads\Bioinformatyka-zad2','wpisywane','wpisywane.txt');
+main(-1,1,-1,'D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\poprawa lab2\Bioinformatyka-zad2','wpisywane','wpisywane.txt');
 
 %Wywyo³anie funckji z dwiema sekwencjami odczytanymi ze strony NCBI
 main(-5,3,-2,'C:\Users\kruko\OneDrive\Pulpit','¯abaKoza','¯abaKoza.txt','FJ185310.1','FJ185309.1');

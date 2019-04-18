@@ -1,6 +1,8 @@
-%Funkcja ta odpowiedzialna jest za podzia³ odczytanego pliku FASTA na
+%READFASTA Podzia³ odczytanego pliku FASTA na
 %nag³ówek oraz sekwencjê. Pomijane s¹ puste linie. Pierwsza niepusta linia
 %przypisywana jest nag³ówkowi, ka¿da kolejan niepusta, sekwencji.
+%
+%file - plik w formacie fasta
 function dataFasta = readFasta(file)
 newStr = splitlines(file);
 lines = 0;

@@ -1,4 +1,6 @@
-%Funkcja ta z nag³owka tekstu FASTA odseparowuje samo ID
+%IDFASTA Z nag³owka tekstu FASTA odseparowuje samo ID
+%
+%header - nag³ówek sekwencji fasta
 function id = idFasta(header)
 idLine = split(header);
 idFirst = idLine{1,1};
