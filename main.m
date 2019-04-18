@@ -25,7 +25,7 @@
 %kolejnoœci
 %
 %length(varargin) == 4 obie sekwencje poierane s¹ z pliku
-function [] = main(miss,match,gap,path,jpgFileName,txtFileName,varargin)
+function [] = main(mode,miss,match,gap,path,fileName,varargin)
 if(length(varargin) < 1)
     fasta1 = inputFasta;
     fasta2 = inputFasta;
@@ -53,10 +53,10 @@ elseif(length(varargin) == 4)
     fasta2 = readFasta(inputFileFasta(varargin(3),varargin(4)));
 end
 
-firstMatrix = createMatrix(miss,match,gap,fasta1,fasta2);
-[aligmentMatrix,score] = searchingWay(firstMatrix,match,miss,gap);
+firstMatrix = createMatrix(miss,match,gap,fasta1,fasta2,mode);
+[aligmentMatrix,score] = searchingWay(firstMatrix,match,miss,gap,fasta1.sequence,fasta2.sequence);
 drawMatrix(firstMatrix,aligmentMatrix,fasta1.header,fasta2.header);
 writingSequence = writeSequence(aligmentMatrix,fasta1,fasta2);
-toTextFile(writingSequence,match,miss,gap,fasta1,fasta2,score,path,txtFileName);
-saveFile(path,jpgFileName);
+toTextFile(writingSequence,match,miss,gap,fasta1,fasta2,score,path,fileName,mode);
+saveFile(path,fileName);
 end

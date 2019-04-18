@@ -94,7 +94,7 @@ else
 end
 madeSeq3 = '';
 for i = 1:n
-    if(madeSeq1(i) == madeSeq2(i))
+    if(madeSeq1(i) == madeSeq2(i) && madeSeq1(i) ~= '-')
         madeSeq3 = strcat(madeSeq3,"|");
         identity = identity + 1;
     else

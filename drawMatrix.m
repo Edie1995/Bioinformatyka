@@ -8,7 +8,7 @@
 %seq1-nag³ówek sekwencji pierwszej 
 %seq2-nag³ówek sekwencji drugiej
 function [] = drawMatrix(firstMatrix, aligmentMatrix,seq1,seq2)
-figure
+figure('Renderer', 'painters', 'Position', [20 50 1300 620])
 hold on
 imagesc(firstMatrix);
 spy(aligmentMatrix,'r');
