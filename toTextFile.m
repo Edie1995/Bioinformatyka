@@ -51,7 +51,7 @@ for i = 1:length(writingSequence)
     percentIdentity = identity / lengthWay * 100;
     percentGaps = gaps / lengthWay * 100;
     
-    fprintf(fileID,'\n#1: %s\n#2: %s\n#Mode: distance\n',fasta1.identifier,fasta2.identifier);
+    fprintf(fileID,'\n#1: %s\n#2: %s\n#Mode: distance\n',fasta1.header,fasta2.header);
     fprintf(fileID,'#Table:\n');
     fprintf(fileID,'%s\n',c{:});
     fprintf(fileID,'#Gap: %-10d\n#Score: %d\n#Length: %-10d\n',gap,score,lengthWay);

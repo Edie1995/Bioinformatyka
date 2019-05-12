@@ -4,7 +4,7 @@
 %fastaContent = inputFasta() tworzy strukturê danych zawieraj¹c¹
 %identyfikator, sekwencjê oraz nag³ówek
 function fastaContent = inputFasta()
-fastaContent = struct('identifier',input('identifier: ', 's'),'sequence',input('sequence: ','s'),'header',input('header: ', 's')); 
+fastaContent = struct('header',input('header: ', 's'),'sequence',input('sequence: ','s')); 
 checkFile(fastaContent.sequence);
 end
 

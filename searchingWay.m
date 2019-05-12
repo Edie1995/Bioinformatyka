@@ -15,7 +15,7 @@
 %rowsOfEnd, colsOfEnd - tablice indeksów miejsc, w których koñczy siê
 %wyznaczanie œcie¿ek
 %dopasowania lokalnego, czyli miejsca otoczone z trzech stron zerami
-function [C,score,rowsOfMaxes, colsOfMaxes, rowsOfEnd, colsOfEnd] = searchingWay(firstMatrix,gap)
+function [C,score,rowsOfMaxes, colsOfMaxes, rowsOfEnd, colsOfEnd] = searchingWay(firstMatrix,gap,seq1,seq2,pointsTable)
 [maxValue] = max(firstMatrix(:));
 [rowsOfMaxes, colsOfMaxes] = find(firstMatrix == maxValue);
 C = cell(length(rowsOfMaxes),1);
@@ -28,24 +28,42 @@ for i = 1:length(rowsOfMaxes)
     aligmentMatrix = zeros(x,y);
     aligmentMatrix(x,y) = 1;
     while x >= 1 || y >= 1
-        maxim = firstMatrix(x - 1,y - 1);
-        a = x - 1;
-        b = y - 1;
-        if(maxim < firstMatrix(x - 1,y))
-            if(firstMatrix(x,y) - firstMatrix(x - 1,y) == gap)
-                maxim = firstMatrix(x - 1,y);
-                a = x - 1;
-                b = y;
-            end
+        a=x;
+        b=y;
+        point =  pointsTable(seq1(x - 1),seq2(y - 1));
+        point = point{:,:};
+        if(x >= 2 && y >= 2 && firstMatrix(x,y) - firstMatrix(x - 1,y - 1) == point  && seq1(x-1)==seq2(y-1))
+            maksimum = firstMatrix(x - 1,y - 1);
+            a = x - 1;
+            b = y - 1;
         end
-        if(maxim < firstMatrix(x,y - 1))
-            if(firstMatrix(x,y) - firstMatrix(x,y - 1) == gap)
-                maxim = firstMatrix(x,y - 1);
+        if( y >= 2 && firstMatrix(x,y) - firstMatrix(x,y - 1) == gap)
+            if(a ~= x || b ~= y)
+                if(maksimum < firstMatrix(x,y - 1))
+                    maksimum=firstMatrix(x,y - 1);
+                    a = x;
+                    b = y - 1;
+                end
+            else
+                maksimum = firstMatrix(x,y - 1);
                 a = x;
                 b = y - 1;
             end
         end
-        if maxim == 0
+        if(x >= 2 && firstMatrix(x,y) - firstMatrix(x - 1,y) == gap)
+            if(a ~= x || b ~= y)
+                if(maksimum<firstMatrix(x - 1,y))
+                    maksimum=firstMatrix(x - 1,y);
+                    a = x - 1;
+                    b = y;
+                end
+            else
+                maksimum=firstMatrix(x - 1,y);
+                a = x - 1;
+                b = y;
+            end
+        end
+        if(maksimum==0)
             break;
         end
         aligmentMatrix(a,b) = 1;

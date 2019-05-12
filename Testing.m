@@ -1,5 +1,5 @@
 %Wywyo³anie funkcji z dwiema sekwencjami wpisanymi przez u¿ytkownika
-main('D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab3\program3','matrix.txt',-2,'D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab3\program3','wpisywane');
+main('D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab3\program3','matrix.txt',-2,'D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\poprawa-zad3\Bioinformatyka-zadanie3','wpisywane');
 
 %Wywyo³anie funkcji z dwiema sekwencjami odczytanymi ze strony NCBI
 main('D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab3\program3','matrix.txt',-2,'D:\Uczelnia\6 semestr\Wstêp do bioinformatyki\lab3\program3','z2Stron','KP056826.1','FJ185309.1');

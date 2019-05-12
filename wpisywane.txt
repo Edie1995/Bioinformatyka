@@ -9,13 +9,13 @@ C-7 2-7-5
 G-5-7 2-7
 T-7-5-7 2
 #Gap: -2        
-#Score: 54
-#Length: 91        
-#Indentity: 8/91(9%)
-#Gaps: 30/91(33%)
-GAGATG-CT-GAT-GCTCAGC-TGACTGCTCTCG-AGCA-TGTAGCTTACGTCAGTC-TG-TAGTACTG-T-G-C-ATG-CA-G-AGCATG
-                 | |                        |  |      |        | |                     |  
-AGCTGCATGCATGACT-C-GTAGACTG----CGACGCATCGTA-G--TC--GA-GCTAGTCA-G-ATGTAGTCGAATGCTAGTATG-CTG
+#Score: 28
+#Length: 41        
+#Indentity: 3/41(7%)
+#Gaps: 12/41(29%)
+CGTG--AGCTA-GT--CAGTCAGC-TGCATCA-GCTGTCA
+            |            |       |      
+TACTGACTGC-TGCTCGTAGTCA-GTCG-C-TAGACT-GCA
 #1: seq1
 #2: seq2
 #Mode: distance
@@ -26,78 +26,10 @@ C-7 2-7-5
 G-5-7 2-7
 T-7-5-7 2
 #Gap: -2        
-#Score: 54
-#Length: 101       
-#Indentity: 12/101(12%)
-#Gaps: 35/101(35%)
-AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTCTGTAGTACT-GTGCATG-CA-GAG
-|         |        |            |   |                 |        | |        |        |      | |       
-AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GC--TAGT-ATGCTG-C-TCTAGCAG
-#1: seq1
-#2: seq2
-#Mode: distance
-#Table:
-# A C G T
-A 2-7-5-7
-C-7 2-7-5
-G-5-7 2-7
-T-7-5-7 2
-#Gap: -2        
-#Score: 54
-#Length: 105       
-#Indentity: 12/105(11%)
-#Gaps: 37/105(35%)
-AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTCTGTAGTACT-GTGCATG-CA-GAGCATG
-|         |        |            |   |                 |        | |        |        |      | |           
-AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GC--TAGT-ATGCTG-C-TCTAGCA--GTG
-#1: seq1
-#2: seq2
-#Mode: distance
-#Table:
-# A C G T
-A 2-7-5-7
-C-7 2-7-5
-G-5-7 2-7
-T-7-5-7 2
-#Gap: -2        
-#Score: 54
-#Length: 107       
-#Indentity: 13/107(12%)
-#Gaps: 38/107(36%)
-AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTCTGTAGTACT-GTGCATG-CA-GA--GCATG
-|         |        |            |   |                 |        | |        |        |      | |          |  
-AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GC--TAGT-ATGCTG-C-TCTAGCAGTG-CTG
-#1: seq1
-#2: seq2
-#Mode: distance
-#Table:
-# A C G T
-A 2-7-5-7
-C-7 2-7-5
-G-5-7 2-7
-T-7-5-7 2
-#Gap: -2        
-#Score: 54
-#Length: 109       
-#Indentity: 11/109(10%)
-#Gaps: 36/109(33%)
-AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTC-TGTAGTACT-G---TGC-ATGCA-GAGCATG
-|         |        |            |   |                 |        | |        |      |                      |   
-AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GCTAGT-ATGCTGCTCTAGCAGTGCTGTA-GATG
-#1: seq1
-#2: seq2
-#Mode: distance
-#Table:
-# A C G T
-A 2-7-5-7
-C-7 2-7-5
-G-5-7 2-7
-T-7-5-7 2
-#Gap: -2        
-#Score: 54
-#Length: 112       
-#Indentity: 10/112(9%)
-#Gaps: 39/112(35%)
-AAGCTGCA-TCG-AG-A-TGC-TGATGCTCAGCTGACTG-CT-C---TCGAG-CATG-TAGC-TTACGT-C--AGTC-TGTAGTACT-G---TGC-ATG---CAG-AG-CAT
-|         |        |            |   |                 |        | |        |      |                             
-AGCTGCATG-CATGACTC-GTAG--AC--TG-CGA-CGCATCGTAGTCGAGCT-AGTCAGATGT-AGTCGAAT-GCTAGT-ATGCTGCTCTAGCAGTGCTGTAGATGCTAT
+#Score: 28
+#Length: 43        
+#Indentity: 4/43(9%)
+#Gaps: 13/43(30%)
+CGTG--AGCTA-GT--CAGTCAGC-TGCATCA-GCTGTC-AG
+            |            |       |      | 
+TACTGACTGC-TGCTCGTAGTCA-GTCG-C-TAGACT-GCATG
