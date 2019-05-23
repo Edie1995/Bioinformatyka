@@ -1,29 +1,29 @@
-%TOFASTAFILE Zapisuje otrzymane w parametrach wejœciowych dane w formacie
-%fasta oraz wyœwietla zapis w konsoli
+%TOFASTAFILE Zapisuje otrzymane w parametrach wejï¿½ciowych dane w formacie
+%fasta oraz wyï¿½wietla zapis w konsoli
 %
-%writingSequence - komórka zawieraj¹ca zapisane sekwencje w formacie z
+%writingSequence - komï¿½rka zawierajï¿½ca zapisane sekwencje w formacie z
 %przerwamie
 %
-%rowsOfMaxes, colsOfMaxes - tablice zawieraj¹ce pocz¹tkowe elementy
-%sekwencji poczas odczytywania œcie¿ek, czyli te o najdalszych indeksach
+%rowsOfMaxes, colsOfMaxes - tablice zawierajï¿½ce poczï¿½tkowe elementy
+%sekwencji poczas odczytywania ï¿½cieï¿½ek, czyli te o najdalszych indeksach
 %
-%rowsOfEnd,colsOfEnd - tablice zawieraj¹ce koñcowe elementy wyznaczania
-%sekwencji poczas odczytywania œcie¿ek, czyli te o najni¿szych indeksach
+%rowsOfEnd,colsOfEnd - tablice zawierajï¿½ce koï¿½cowe elementy wyznaczania
+%sekwencji poczas odczytywania ï¿½cieï¿½ek, czyli te o najniï¿½szych indeksach
 %
-%fasta1,fasta2 - formatowane struktury zawieraj¹ce nag³ówki sekwencji
+%fasta1,fasta2 - formatowane struktury zawierajï¿½ce nagï¿½ï¿½wki sekwencji
 %
-%path,fileName - œcie¿ka i nazwa pliku, do którego zapisany ma byæ
+%path,fileName - ï¿½cieï¿½ka i nazwa pliku, do ktï¿½rego zapisany ma byï¿½
 %wygenerowany plik fasta
 function [] = toFastaFile(writingSequence,rowsOfMaxes, colsOfMaxes,rowsOfEnd,colsOfEnd,fasta1,fasta2,path,fileName)
-sciezkaZapisu = (path + "\" + fileName + ".fasta");
+sciezkaZapisu = char(path + "/" + fileName + ".fasta");
 fileID = fopen(sciezkaZapisu,'w');
 header1 = fasta1.header;
 header2 = fasta2.header;
 
 for i = 1:length(writingSequence)
-    fprintf(fileID,'>%s %d-%d\n', header1,rowsOfEnd(i),rowsOfMaxes(i));
+    fprintf(fileID,'>%s %d-%d\n', header1,(rowsOfEnd(i)-1),(rowsOfMaxes(i)-1));
     fprintf(fileID,'%s\n',writingSequence(i).madeSeq1);
-    fprintf(fileID,'>%s %d-%d\n', header2,colsOfEnd(i),colsOfMaxes(i));
+    fprintf(fileID,'>%s %d-%d\n', header2,(colsOfEnd(i)-1),(colsOfMaxes(i)-1));
     fprintf(fileID,'%s\n\n',writingSequence(i).madeSeq2);
 end
 

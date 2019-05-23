@@ -1,37 +1,40 @@
-%WRITESEQUENCE - Zapisuje ci¹gi znaków sekwencji w postaci z przerwami
-%('-') oraz dodatkowo tworzy ci¹g znaków odpowiadaj¹cy dopasowaniom
-%poszczególnych sekwencji ('|')
+%WRITESEQUENCE - Zapisuje ciï¿½gi znakï¿½w sekwencji w postaci z przerwami
+%('-') oraz dodatkowo tworzy ciï¿½g znakï¿½w odpowiadajï¿½cy dopasowaniom
+%poszczegï¿½lnych sekwencji ('|')
 %
-%aligmentCell - komórka zawieraj¹ca wszystkie macierze punktowe zawieraj¹ce
-%œcie¿kê dopasowania
+%aligmentCell - komï¿½rka zawierajï¿½ca wszystkie macierze punktowe zawierajï¿½ce
+%ï¿½cieï¿½kï¿½ dopasowania
 %
-%rowsOfMaxes, colsOfMaxes - tablice zawieraj¹ce maksymalne indeksy, od
-%których zaczynamy œcie¿ki
+%rowsOfMaxes, colsOfMaxes - tablice zawierajï¿½ce maksymalne indeksy, od
+%ktï¿½rych zaczynamy ï¿½cieï¿½ki
 %
-%fasta1,fasta2  - struktury zawieraj¹ce sformatowane dane z formatu fasta
+%fasta1,fasta2  - struktury zawierajï¿½ce sformatowane dane z formatu fasta
 function writeSequence = writeSequence(aligmentCell,rowsOfMaxes, colsOfMaxes, fasta1,fasta2)
 
 for s=1:size(aligmentCell)
-  
+    
     seq1 = fasta1.sequence;
     seq2 = fasta2.sequence;
-   
+    
     x = rowsOfMaxes(s);
     y = colsOfMaxes(s);
-   
+    
     numSeq1 = x-1;
     numSeq2 = y-1;
     aligmentMatrix = cell2mat(aligmentCell{s});
     
     madeSeq1 = seq1(numSeq1);
     madeSeq2 = seq2(numSeq2);
- 
+    
     gaps = 0;
     identity = 0;
     lengthWay = 1;
-   
+    
     
     while x >= 2 && y >= 2
+        if(aligmentMatrix(x - 1,y) == 0 && aligmentMatrix(x,y - 1) == 0 && aligmentMatrix(x - 1,y - 1) == 0)
+            break;
+        end
         if(aligmentMatrix(x - 1,y) == 1)
             numSeq1 = numSeq1 - 1;
             if(numSeq1 > 0)
@@ -67,7 +70,7 @@ for s=1:size(aligmentCell)
         y = b;
         lengthWay = lengthWay + 1;
     end
-
+    
     while a > 1
         if (aligmentMatrix(a - 1,b) == 1)
             numSeq1 = numSeq1 - 1;
@@ -101,7 +104,7 @@ for s=1:size(aligmentCell)
         n = length(madeSeq2);
     end
     madeSeq3 = '';
-
+    
     for i = 1:n
         if(madeSeq1(i) == madeSeq2(i))
             madeSeq3 = strcat(madeSeq3,"|");
@@ -112,5 +115,5 @@ for s=1:size(aligmentCell)
     end
     idx = s;
     writeSequence(idx) = struct('gaps',gaps,'identity',identity,'lengthWay',lengthWay,'madeSeq1',madeSeq1,'madeSeq2',madeSeq2,'madeSeq3',madeSeq3);
-   
+    
 end

@@ -1,21 +1,21 @@
-%TOTEXTFILE Formatuje plik tekstowy utworzony z danych wejœciowych oraz zapisuje go
+%TOTEXTFILE Formatuje plik tekstowy utworzony z danych wejï¿½ciowych oraz zapisuje go
 %
 %pointsTable - macierz substytucji
 %
-%writingSequence - struktura cell zawieraj¹ca trzy wygenerowane sekwencjê
-%(sekwencja pierwsza i druga z przerwami oraz ci¹g ich dopasowañ)
+%writingSequence - struktura cell zawierajï¿½ca trzy wygenerowane sekwencjï¿½
+%(sekwencja pierwsza i druga z przerwami oraz ciï¿½g ich dopasowaï¿½)
 %
-%gap - kara za przerwê
+%gap - kara za przerwï¿½
 %
 %fasta1,fasta2 - struktury danych z formatu fasta
 %
-%score - maksymalna wartoœæ w macierzy kosztu
+%score - maksymalna wartoï¿½ï¿½ w macierzy kosztu
 %
-%path,txtFileName - œcie¿ka i nazwa pliku, do którego ma zostaæ zapisany
+%path,txtFileName - ï¿½cieï¿½ka i nazwa pliku, do ktï¿½rego ma zostaï¿½ zapisany
 %sformatowany tekst
 function [] = toTextFile(pointsTable,writingSequence,gap,fasta1,fasta2,score,path,txtFileName)
 
-sciezkaZapisu = path + "\" + txtFileName + ".txt";
+sciezkaZapisu = char(path + "/" + txtFileName + ".txt");
 fileID = fopen(sciezkaZapisu,'w');
 
 rows = char(pointsTable.Properties.RowNames);

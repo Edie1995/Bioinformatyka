@@ -1,19 +1,19 @@
-%SEARCHINGWAY Tworzy optymalne œcie¿ki dopasowania dla ka¿dej z
-%maksymalnych wartoœci w macierzy kosztu
+%SEARCHINGWAY Tworzy optymalne ï¿½cieï¿½ki dopasowania dla kaï¿½dej z
+%maksymalnych wartoï¿½ci w macierzy kosztu
 %
 %firstMatrix - macierz kosztu
-%gap - kara za przerwê
+%gap - kara za przerwï¿½
 %
-%C - komórka zwieraj¹ca wszystkie z wygenerowanych œcie¿ek w postaci
-%macie¿y puntacji 0 1
+%C - komï¿½rka zwierajï¿½ca wszystkie z wygenerowanych ï¿½cieï¿½ek w postaci
+%macieï¿½y puntacji 0 1
 %
-%score - wartoœæ maksymalnej wartoœci
+%score - wartoï¿½ï¿½ maksymalnej wartoï¿½ci
 %
-%rowsOfMaxes, colsOfMaxes - tabice indeksów wierszy i kolumn zaweiraj¹cych
-%maksymalne wartoœci w macierzy kosztu
+%rowsOfMaxes, colsOfMaxes - tabice indeksï¿½w wierszy i kolumn zaweirajï¿½cych
+%maksymalne wartoï¿½ci w macierzy kosztu
 %
-%rowsOfEnd, colsOfEnd - tablice indeksów miejsc, w których koñczy siê
-%wyznaczanie œcie¿ek
+%rowsOfEnd, colsOfEnd - tablice indeksï¿½w miejsc, w ktï¿½rych koï¿½czy siï¿½
+%wyznaczanie ï¿½cieï¿½ek
 %dopasowania lokalnego, czyli miejsca otoczone z trzech stron zerami
 function [C,score,rowsOfMaxes, colsOfMaxes, rowsOfEnd, colsOfEnd] = searchingWay(firstMatrix,gap,seq1,seq2,pointsTable)
 [maxValue] = max(firstMatrix(:));
@@ -29,7 +29,7 @@ for i = 1:length(rowsOfMaxes)
     aligmentMatrix(x,y) = 1;
     while x >= 1 || y >= 1
         a=x;
-        b=y;
+        b=y; 
         point =  pointsTable(seq1(x - 1),seq2(y - 1));
         point = point{:,:};
         if(x >= 2 && y >= 2 && firstMatrix(x,y) - firstMatrix(x - 1,y - 1) == point  && seq1(x-1)==seq2(y-1))

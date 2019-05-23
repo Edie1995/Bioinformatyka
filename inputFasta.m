@@ -7,4 +7,3 @@ function fastaContent = inputFasta()
 fastaContent = struct('header',input('header: ', 's'),'sequence',input('sequence: ','s')); 
 checkFile(fastaContent.sequence);
 end
-
