@@ -1,14 +1,14 @@
-%CREATEMATRIX tworzy macierz kosztów.
+%CREATEMATRIX tworzy macierz kosztï¿½w.
 %
-%miss-wartoœæ jak¹ przyjmujemy dla niezgodnoœci sekwencji
-%match-dopasowanie, wartoœæ jak¹ przyjmujemy za dopasowanie
-%gap-wartoœæ jak¹ przyjmujemy za przerwê
-%fasta1-pierwszy plik fasta, z którego mo¿emy pobraæ sekwencjê
-%fasta2-drugi plik fasta, z którego mo¿emy pobraæ sekwencjê
+%miss-wartoï¿½ï¿½ jakï¿½ przyjmujemy dla niezgodnoï¿½ci sekwencji
+%match-dopasowanie, wartoï¿½ï¿½ jakï¿½ przyjmujemy za dopasowanie
+%gap-wartoï¿½ï¿½ jakï¿½ przyjmujemy za przerwï¿½
+%fasta1-pierwszy plik fasta, z ktï¿½rego moï¿½emy pobraï¿½ sekwencjï¿½
+%fasta2-drugi plik fasta, z ktï¿½rego moï¿½emy pobraï¿½ sekwencjï¿½
 %
 %firstMatrix = createMatrix (miss,match,gap,fasta1,fasta2)-stworzona
 %macierz kosztu
-function firstMatrix = createMatrix (miss,match,gap,fasta1,fasta2)
+function [score,aligmentMatrix] = createMatrix (miss,match,gap,fasta1,fasta2)
 sequence1 = fasta1;
 sequence2 = fasta2;
 firstMatrix = zeros(length(sequence1)+1,length(sequence2)+1);
@@ -26,7 +26,7 @@ for i = 2:(length(sequence1)+1)
         num1 = firstMatrix (i,j - 1) + gap;
         seq1 = sequence1(i-1);
         seq2 = sequence2(j-1);
-        if(sequence1(i-1) == sequence2(j-1))
+        if(seq1 == seq2)
             num2 = firstMatrix(i - 1,j - 1) + match;
         else
             num2 = firstMatrix(i - 1,j - 1) + miss;
@@ -34,11 +34,12 @@ for i = 2:(length(sequence1)+1)
         if(min > num1)
             min = num1;
         end
-        if(min > num2)
+        if(min >= num2)
             min = num2;
         end
         firstMatrix(i,j) = min;
     end
 end
-
+aligmentMatrix = firstMatrix;
+score  = firstMatrix(length(sequence1)+1,length(sequence2)+1);
 end

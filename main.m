@@ -1,25 +1,27 @@
-% MAIN Glowan funkcja wywolujaca program
-% miss - punkty za niezgodnosc
-% match - punkty za zgodnosc
-% gap - punkty za przerwe
-% path - sciezka do zapisu pliku
-% filename - nazwa pliku do zapisu
-% varargin - sciezki do plikow lub identyfikatory do sekwencji
-
 function [] = main(miss,match,gap,path,fileName,varargin)
-
-for i = 1 : length(varargin)
-    if (contains(varargin(i),'.fasta'))
-        emptySequences(i) = readFasta(inputFileFasta(varargin(i)));
+if(miss<match || gap<match)
+    warning ("cena za gap lub miss jest wieksza od match, wyniki moga byc niepoprawne!");    
+    %% 
+end
+k=0;
+for i = 1: length(varargin)
+    if(contains(varargin(i),'.fasta'))
+        fileSequenceStruct = readFasta(inputFileFasta(char(varargin(i))));
+        for j = 1: length(fileSequenceStruct) 
+            k=k+1;
+            seqenceStruct(k) = fileSequenceStruct(j);
+        end
     else
-        emptySequences(i) = readFasta(fetchFasta(varargin(i)));
+        fileSequenceStruct = readFasta(fetchFasta(char(varargin(i))));
+        k=k+1;
+        seqenceStruct(k) = fileSequenceStruct;
     end
 end
-score = searchingCostWay(match,miss,gap,emptySequences);
-[M,I] = chooseCenterSequence(score);
-[comparedSequences,tabHelper] = searchingBestAligment(match,miss,gap,I,emptySequences);
-matchSequences = addGapSign(comparedSequences,I,tabHelper);
+idx = searchingCenter(miss,match,gap,seqenceStruct);
+[aligmentSeqences, tabHelper] = searchAligment(miss,match,gap,idx,seqenceStruct);
+matchSequences = addGapSign(aligmentSeqences,idx,tabHelper);
 starAligment = addStar(matchSequences);
-toTextFile(matchSequences,path,fileName,starAligment,emptySequences);
-toFastaFile(matchSequences,emptySequences,path,fileName)
+toTextFile(matchSequences,path,fileName,starAligment,seqenceStruct);
+toFastaFile(matchSequences,seqenceStruct,path,fileName);
+
 end

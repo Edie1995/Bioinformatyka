@@ -1,8 +1,7 @@
-%IDFASTA Z nag³owka tekstu FASTA odseparowuje samo ID
-%
-%header - nag³ówek sekwencji fasta
+%IDFASTA Odziela specyficzny dla sekwencji identyfikator od peï¿½nej nazwy
+%nagï¿½ï¿½wka
 function id = idFasta(header)
 idLine = split(header);
 idFirst = idLine{1,1};
-id = idFirst(2:end);
+id = idFirst(1:end);
 end

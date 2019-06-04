@@ -17,15 +17,13 @@
 function [writeSequence1,writeSequence2,doneTab] = writeSequence(aligmentMatrix, fasta1,fasta2,tabHelper,k)
 seq1 = fasta1;
 seq2 = fasta2;
-numSeq1 = length(seq1);
-numSeq2 = length(seq2);
-numTab = length(char(tabHelper));
-[x1,y1] = size(aligmentMatrix);
-x=x1-1;
-y=y1-1;
-madeSeq1 = seq1(numSeq1);
-madeSeq2 = seq2(numSeq2);
-madeHelper = tabHelper(numTab);
+numSeq1 = length(seq1)+1;
+numSeq2 = length(seq2)+1;
+numTab = length(char(tabHelper))+1;
+[x,y] = size(aligmentMatrix);
+madeSeq1 = '';
+madeSeq2 = '';
+madeHelper = '';
 while x >= 2 && y >= 2
     if(aligmentMatrix(x - 1,y) == 1)
         numSeq1 = numSeq1 - 1;
