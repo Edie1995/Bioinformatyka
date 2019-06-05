@@ -6,20 +6,22 @@
 %fasta
 %fasta2 - druga struktura zawieraj�ca sekwencj� odczytan� z formatu
 %fasta
-%
-%writeSequence - struktura zawiraj�ca dopasowane sekwencje w postaci ci�gu
+%tabHelper - tablica zawierajaca informacje na tamet przerw w macierzy centarlnej
+% k - indeks przyrownywanej sekwencji
+% 
+%writeSequence1 - struktura zawiraj�ca dopasowana sekwencje centralna w postaci ci�gu
 %znak�w oraz ilo�� przerw, ilo�� dopasowa� oraz d�ugo�� drogi optymalnego
 %dopasowania
-%
-%writeSequence = struct('gaps',gaps,'identity',identity,'lengthWay',...
-%lengthWay,'madeSeq1',madeSeq1,'madeSeq2',madeSeq2,'madeSeq3',madeSeq3);
-%doneTab - zaktualizowany ciag zawierajacy dane o przerwach
+%writeSequence2 - struktura zawiraj�ca dopasowana sekwencje druga w postaci ci�gu
+%znak�w oraz ilo�� przerw, ilo�� dopasowa� oraz d�ugo�� drogi optymalnego
+% dopasowania
+% doneTab - tablica zawierajaca informacje na tamet przerw w macierzy centarlnej
 function [writeSequence1,writeSequence2,doneTab] = writeSequence(aligmentMatrix, fasta1,fasta2,tabHelper,k)
 seq1 = fasta1;
 seq2 = fasta2;
-numSeq1 = length(seq1)+1;
-numSeq2 = length(seq2)+1;
-numTab = length(char(tabHelper))+1;
+numSeq1 = length(seq1) + 1;
+numSeq2 = length(seq2) + 1;
+numTab = length(char(tabHelper)) + 1;
 [x,y] = size(aligmentMatrix);
 madeSeq1 = '';
 madeSeq2 = '';
@@ -92,5 +94,4 @@ end
 writeSequence1 = struct('madeSeq2',madeSeq1);
 writeSequence2 = struct('madeSeq2',madeSeq2);
 doneTab = struct('tab',madeHelper);
-
 end

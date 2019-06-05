@@ -16,7 +16,7 @@ for i = 1: length(comparedSequences)
         for j = 1:length(mainSequence)
             if(numSeq<=length(sequenceToCopare))
                 licznik = str2num(tabHelper(j));
-                if(licznik>i)
+                if(licznik > i)
                     addStr = '-';
                     lastSeq1 = strcat(lastSeq1,addStr);
                 else

@@ -1,18 +1,10 @@
-%TOFASTAFILE Zapisuje otrzymane w parametrach wej�ciowych dane w formacie
-%fasta oraz wy�wietla zapis w konsoli
+%TOFASTAFILE Zapisuje otrzymane w parametrach wejsciowych dane w formacie
+%fasta oraz wyswietla zapis w konsoli
 %
-%writingSequence - kom�rka zawieraj�ca zapisane sekwencje w formacie z
-%przerwamie
-%
-%rowsOfMaxes, colsOfMaxes - tablice zawieraj�ce pocz�tkowe elementy
-%sekwencji poczas odczytywania �cie�ek, czyli te o najdalszych indeksach
-%
-%rowsOfEnd,colsOfEnd - tablice zawieraj�ce ko�cowe elementy wyznaczania
-%sekwencji poczas odczytywania �cie�ek, czyli te o najni�szych indeksach
-%
-%fasta1,fasta2 - formatowane struktury zawieraj�ce nag��wki sekwencji
-%
-%path,fileName - �cie�ka i nazwa pliku, do kt�rego zapisany ma by�
+%writingSequence - komorka zawierajaca zapisane sekwencje w formacie z
+%przerwami
+%fasta - formatowane struktury zawierajace naglowki sekwencji
+%path,fileName - sciezka i nazwa pliku, do ktorego zapisany ma byc
 %wygenerowany plik fasta
 function [] = toFastaFile(writingSequence,fasta,path,fileName)
 sciezkaZapisu = char(path + "/" + fileName + ".fasta");
