@@ -1,0 +1,7 @@
+seq1	AAACGT---	6
+seq2	---CGT---	3
+seq3	---CGTAAA	6
+seq4	---CAT---	3
+seq5	---CCT-TA	5
+    	   * *   	
+

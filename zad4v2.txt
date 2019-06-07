@@ -1,0 +1,96 @@
+JQ735466.1	-A-GG-----TCN-AGC----CC---------GG-A-A-CC------CTACT----T---	23
+JQ735460.1	--GGG-----TC----CAA--CCT--------GG------CA-----C-ACTGC--TA--	23
+JQ735459.1	TA-GG------C----C--AACC-T-------GG--GA-CC------CTAC-----T-A-	23
+JQ179960.1	-A---TTAATTC-GAG------C--TGAATTAGGTA-ATCC-TGGGTCT-CT--AAT--T	40
+          	           *          *         **      *      *  *     *   	
+
+JQ735466.1	GGC---GATGATCAA--ATCT--A-T--AATGTA---ATT-GTT-ACA--GCT-----CA	61
+JQ735460.1	GG-A--GATGATC-AG-AT-T---TTC-AATGTA---A-TCG-T--CA---CTGCC--CA	61
+JQ735459.1	GG--A-GATGATC-A-GATC-G-A---CAATGT-C--ATT-G-T-A-ACCGC----C-CA	61
+JQ179960.1	GG---TGATGATCAA--AT-T-TA-T--AA--TA-CTATT-G-TCACA--GC-----ACA	78
+          	**    ******* *  **         **  *    * * * *   *   *      **	
+
+JQ735466.1	TGCC-T-TT-GTA--ATA-ATCTTCTT--T---ATA---GTA---ATAC-CC--ATTATG	101
+JQ735460.1	TG-CTT-TT-GTA--AT-GATCTT-TT--T----TATG-GT-G--AT--GCCT-ATTAT-	100
+JQ735459.1	TG-C--ATTCGTA--ATA-A--TT-TTCGTG--AT---GGT--C-ATAC-CC-----ATG	98
+JQ179960.1	TG-C-T-TT--TATTATA-AT-TT-TT--T-TTATA---GT---TATA--CC-TATTAT-	117
+          	** *   **  **  **  *  ** **  *    *    **    **   **     ** 	
+
+JQ735466.1	-AT---T-G-G-G-GGT-T-TT--GGT--AAC--TGACTC---GTA--CCGC------TA	134
+JQ735460.1	-A-A--TCG-GAG-GG----TTC-GG-A-AAC--TGA-T-TG-GT---CC-CAT----TA	134
+JQ735459.1	-AT-AAT--CG-GAGG---ATT-CGG--AAAC--TGA-T-----TAGTCC-C--CC--T-	133
+JQ179960.1	AAT---T-G-G-G-GG-AT-TT--GG---AA-ATTGACT---TGTA---C-C----TTTA	151
+          	 *    *   * * **    **  **   **   *** *     *    * *      * 	
+
+JQ735466.1	-ATAATC----GGAGCTC-CC---GAT-ATG---GCC--TTTCCA---CGT---ATAAAC	173
+JQ735460.1	-ATAAT-T---GGAGC-C-CCT--GA-CAT-A--G-CA-TTTCC-C--CG-A--ATAAAC	173
+JQ735459.1	GATAAT--T--GGAG--CACC-T-GAT-AT--A-G-C--TTTCC--CCCG--A-ATAAAC	173
+JQ179960.1	-AT-AT---TAGGAGC-C-CC--TGAT-AT---AG-C-TTTTCCA---CG---AATAAA-	189
+          	 ** **     ****  * **   **  **    * *  *****    **    ***** 	
+
+JQ735466.1	-AAC-ATA-AG-T--TTCT-GAC--TACT--TCCA--CCATCC--TTCCTA-T-TAC---	213
+JQ735460.1	-AAC-AT-GAG--C-TTCT-GAC--T-C-CATCC-T-CCATCCT-TTCC-A--CT-CT--	213
+JQ735459.1	-AAC-ATA-AG---CTTC-GGA-T-TACT--TCC--CCCAT-C-ATTCCTACT-T-C---	213
+JQ179960.1	TAA-TATA-AGAT--TT-T-GA--TTACT--T-C---CC--CC--TT-CTA-T-TAC-CC	227
+          	 **  **  **    **   **   * *   * *   **   *  ** * *   * *   	
+
+JQ735466.1	---T-A---CT-G--GC-AT-C-C--T-C--AA--TA--GTA--GA-AGCC---GGA-GC	244
+JQ735460.1	---T-A---CT-----C---GC-C--T-C---ATCTATGGTA--G-CAGCC---GGA-GC	244
+JQ735459.1	---T------T-----C--T-CGCT-TCCGGAA--TA----ATTGA-AG-CA--GG-TGC	244
+JQ179960.1	TTTTAATTTCTAGAAG-AAT---C-GT--------T---G-A---A-A----ATGGA-GC	261
+          	   *      *            *  *        *     *     *      **  **	
+
+JQ735466.1	G--GGT---ACT---GGA-TGA-ACT---GTA-TAC--CCA-CCTT-T---AG-CT-GG-	280
+JQ735460.1	G--GG-A--AC-C--GGA-TG-GAC-A--GTA-TAC--CCA-CC----CCCAG-C-CGG-	280
+JQ735459.1	-C-GG--A-AC--A-GG-CTGA-AC--C-GTA-TA-T-CC-TCC-TCT---AG-CT-GG-	280
+JQ179960.1	--TGG---AAC---AGGA-TGA-AC---AGT-TTA--TCCA-CCTT-T---A-TCT---T	296
+          	   **    **    **  **  **    **  **   **  **       *  *     	
+
+JQ735466.1	--A-A-ACT-TAG-C---C---CATGCAG-G-G-----GCT--TCA-GTT--GAT-T--T	313
+JQ735460.1	---CA-AC-----CCGG-CT--CATGC-G-G-GA----GC-A-TC-CG-TA-GA---CGT	313
+JQ735459.1	--A-A-A-TCT-G----GC-G-CATGCAG-GAG-CC--GC---T---GTT--GA-CT--T	313
+JQ179960.1	CTA-ATA-T-T-G-----C--TCATG--GTG-G---AAG---ATCA-G-T-AGAT-T--T	330
+          	    * *           *   ****  * * *     *    *   * *  **     *	
+
+JQ735466.1	AA-CA---ATTTTC-TC-C---C--TA-CACCTT-----GCAGGT--GTA---TCA----	347
+JQ735460.1	AA-C-T--ATTTT--T-TCA--C--TA-CACC--CG---GCAGGT--GT-C--TC-C---	347
+JQ735459.1	AA-C--C-ATTTT-GT--C-T-C--T-CCACC-T--A--GC-GG-GGGT--G-TC-----	346
+JQ179960.1	-AGC---TATTTT--T-----TCTTTA-CA--TT---TAGCA-G---G-A--ATC--TCC	364
+          	 * *    *****  *      *  *  **         **  *   *     **     	
+
+JQ735466.1	TCA---ATCC----TA-GGG---GCT--ATT-AAT-TTC--ATT-ACC-ACA--ATT-AT	385
+JQ735460.1	TCA---AT-C----T-TGGGT--GCT--ATT-AAT-TTC--ATT-A-CTAC-T-ATT-AT	385
+JQ735459.1	-C-GCGAT--TT--TA--GG-T-GC-C-A-TCAA-CTT-G-A-TGACC-ACA--A-TGAT	385
+JQ179960.1	TCA---AT----TTTA--GG--AGC--AATT-AAT-TT--TATT-ACC-AC--TATT-AT	402
+          	 *    **      *   **   **   * * **  **   * * * * **   * * **	
+
+JQ735466.1	TA-AC-ATA--A--AACC-TCC-C-GCA-ATG-TCT-----CA-A-----T-AC---CAA	419
+JQ735460.1	TA-A-TATA--A--AACC-T-C-CTGC-CATG-TC-C----CA-A-----T-A-T--CAA	419
+JQ735459.1	T-GAC-ATA--A--AA----CCAC--C--A-GCTCT-ATCCCA-A-----T-A--T-CAA	419
+JQ179960.1	TA-AC-ATACGATTAA--AT-------A-A-----T------ATATTTTTTGA---TC-A	435
+          	*  *  ***  *  **             *            * *     * *    * *	
+
+JQ735466.1	AC--ACCCCTG---T-T-T-GTC--TGATCA-GT-A-C-----T--A-ATC--ACA-GC-	454
+JQ735460.1	AC--ACCCC--CA-T-T-T-GT-T-TGATCA-GT---CT----T--A-ATC--AC-TG--	453
+JQ735459.1	AC---CCCC----CTAT-TCGT--TTGATC-TGT---C-C---T---GAT-G-AC--G-G	453
+JQ179960.1	A-TTA--CCT----T-TAT--T---TG-T---GTGAGC--TGTTGGA-AT--TACA-G--	470
+          	*      **     * * *  *   ** *   **   *     *    **   **  *  	
+
+JQ735466.1	C--GTAC----TA-CT-TC--TAC----TAT-CC-CTG----CCA-GT--TC--TAGCAG	489
+JQ735460.1	CT-GT-C----T---TGT---TACTTT-TAT--CACT-T---CCA-GT--T-T-TAGCAG	489
+JQ735459.1	C-AGTAC----T-CCT-TC--T-C---CTA-GCC-CT-----CC-CG-G-TC-CTAGCAG	489
+JQ179960.1	C----A-TTTTTA--T-T-ATTAC----TAT----CT--TTACCA-GT-AT---T---AG	503
+          	*          *   * *   * *    **     **     **  *   *   *   **	
+
+JQ735466.1	CT--G-GC--AT-T-A-CT-ATA-C----TAT-TG---ACAGAC--CGC----ACC--TG	523
+JQ735460.1	C---G-G-G-A-ATCA-CT-AT---GT--TAT-T-A--ACAGA-T-CG-AA--ACC----	522
+JQ735459.1	C-A-G-GC--AT-T--GC-CAT-GC----T-TCT--C-ACAGAC--CG---TAACC--T-	523
+JQ179960.1	CT-GGAGC-TAT-T-A-CT-AT-----NTTAT-T---AACAGA--TCG-----A--AAT-	538
+          	*   * *   *  *   *  **       * * *    *****   **     *      	
+
+JQ735466.1	--AC------A---C------	527
+JQ735460.1	---CAA----A---C------	527
+JQ735459.1	--A---A---A---C------	527
+JQ179960.1	TTA----AATACNTCATTTTT	555
+          	          *   *      	
+
